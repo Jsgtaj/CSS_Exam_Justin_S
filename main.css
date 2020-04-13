@@ -1,0 +1,240 @@
+/* 1) The cards are arranged in a grid layout*/
+@charset "UTF-8";
+
+@font-face {
+  font-family: "open_sansregular";
+  src: url("OpenSans-Regular-webfont.eot");
+  src: url("OpenSans-Regular-webfont.eot?#iefix") format("embedded-opentype"),
+    url("OpenSans-Regular-webfont.woff2") format("woff2"), url("OpenSans-Regular-webfont.woff") format("woff"),
+    url("OpenSans-Regular-webfont.ttf") format("truetype"), url("OpenSans-Regular-webfont.svg#open_sansregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  height: 100%;
+}
+
+body {
+  font-family: "open_sansregular", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  height: 100%;
+  text-align: center;
+}
+
+main {
+  margin: auto;
+  max-width: 80vw;
+}
+main p {
+  margin: auto;
+  max-width: 55vw;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 0.5rem;
+  font-size: 3.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+h2 {
+  margin-bottom: 0;
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+h3 {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  margin: 0.75rem 0;
+  font-size: 2.5rem;
+}
+h3 span {
+  font-size: 2rem;
+  color: #6c757d;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+img {
+  margin: 1rem 0;
+  border-radius: 0.2rem;
+  max-width: 100%; /* ANSWER NUMBER 4 IS RIGHT HERE! */
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+header {
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: solid 1px #00000022;
+  margin-bottom: 4rem;
+}
+/*header styles*/
+header p {
+  margin: 0;
+  align-self: center;
+}
+
+header ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.container header li:last-of-type {
+  border: 1px solid #007bff;
+  padding: 0.375rem 0.75rem;
+  margin-left: 1rem;
+  border-radius: 0.3rem;
+}
+
+header ul li a,
+header ul li a:link,
+header ul li a:visited,
+header ul li a:focus {
+  text-decoration: none;
+  margin: 0 0.6vw;
+  color: #343a40;
+}
+
+header ul li a:hover,
+header ul li a:active {
+  text-decoration: underline;
+}
+
+.container header li:last-of-type a {
+  padding: 0;
+  text-decoration: none;
+  color: #007bff;
+}
+
+/*button styles*/
+
+/* EXPLAIN THIS STYLE RULE (1 mark) */
+/* This style rule is targeting all button children of the pricingTable class.*/
+/*```ROOT FONT SIZE HAS BEEN CHANGED TO 16px TO MATCH BOOTSTRAP```*/
+/* There is .5rem (8px) padding on the top and bottom, 1rem(16px) padding on the sides*/
+/* The font size is 1.25rem (20px)*/
+/* The spacing between lines of text is 1.5x the font size(1.5x20px=30px)*/
+/* There is a .3rem (4.8px) border rounding applied to all sides of the element*/
+
+/*pricing table styles*/
+.pricingTable button {
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  border-radius: 0.3rem;
+}
+
+.pricingTable section:first-of-type button {
+  color: #007bff;
+  border: 1px solid #007bff;
+}
+
+/* FIX THIS STYLE RULE  (2 marks) */
+
+.pricingTable section:nth-of-type(2) button,
+.pricingTable section:nth-of-type(3) button {
+  background-color: #007bff;
+  color: #fff;
+  border: transparent;
+}
+
+.pricingTable {
+  margin: auto;
+  max-width: 72vw;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.pricingTable section {
+  padding: 1rem 0;
+  margin: 1rem;
+  border: solid 1px #00000022;
+  border-radius: calc(0.25rem - 1px);
+}
+.pricingTable section h2 {
+  padding-bottom: 0.5rem;
+  border-bottom: solid 1px #00000022;
+}
+/*banner image*/
+.bannerimage {
+  border-radius: 0.2rem;
+  height: 20rem;
+  width: 100%;
+  background-image: url("image/pexels-photo-2194261.jpeg");
+  /*Photo by Tranmautritam from Pexels*/
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 -5rem;
+  margin-bottom: 2rem;
+}
+/*footer styles*/
+footer {
+  border-top: solid 1px #00000022;
+  padding: 3rem 0;
+  margin: auto;
+  margin-top: 3rem;
+  max-width: 72vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+footer p {
+  text-align: left;
+  font-size: 1rem;
+  max-width: 10rem;
+  color: #6c757d;
+}
+
+footer div,
+footer ul {
+  max-width: 11vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #6c757d;
+}
+
+footer h4 {
+  margin-block-end: 0;
+  color: #343a40;
+}
+/*media query*/
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 20px;
+  }
+}
